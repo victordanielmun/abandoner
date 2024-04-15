@@ -1,0 +1,226 @@
+/* ----------------------------------------------------------------
+# abandoner Variables
+-----------------------------------------------------------------*/
+
+/* Fonts */
+#abandoner {
+  --abandoner-default-font: "Arial", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue";
+  --abandoner-heading-font: "Georgia", serif, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+  --abandoner-button-font: "Arial Black", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue";
+  --abandoner-close-button-font: "Open Sans", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Helvetica Neue";
+}
+
+/* Font Sizes */
+#abandoner {
+  --abandoner-default-font-size: 1.5em;
+  --abandoner-heading-font-size: 2.0em;
+  --abandoner-button-font-size: 0.9em;
+  --abandoner-button-close-font-size: 1.5em;
+}
+
+/* Colors */
+#abandoner {
+  --abandoner-bg-color: #071C2E;
+  --abandoner-bg-icon-color: #ffffff;
+  --abandoner-font-default-color: #ffffff;
+  --abandoner-heading-font-color: #ffffff;
+  --abandoner-button-color: #C94100;
+  --abandoner-button-font-color: #ffffff;
+  --abandoner-button-border-color: #071c2e;
+  --abandoner-button-hover-color: #9B3200;
+  --abandoner-button-hover-font-color: #ffffff;
+  --abandoner-button-clic-color: #701919;
+  --abandoner-button-clic-font-color: #ffffff;
+  --abandoner-button-close-color: #071C2E;
+  --abandoner-button-close-hover-color: #1A1A1A;
+}
+
+/* Modal Sizes */
+#abandoner {
+  --abandoner-max-width: 300px;
+  --abandoner-min-width: 250px;
+  --abandoner-max-height: 250px;
+  --abandoner-min-height: 200px;
+}
+
+/* Modal Transition */
+#abandoner {
+  --abandoner-default-transition: all 0.3s ease;
+}
+
+/* Modal Animation */
+#abandoner {
+  --abandoner-default-animation: none;
+}
+
+/* Modal background Opacity */
+#abandoner {
+  --abandoner-default-opacity: hsl(210, 8%,25%);
+}
+
+/* Modal Shadow */
+#abandoner {
+  --abandoner-default-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Convert em to px */
+#abandoner {
+  font-size: 62.5%;
+}
+
+/* ----------------------------------------------------------------
+# abandoner Styles
+-----------------------------------------------------------------*/
+.abandoner-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--abandoner-default-opacity);
+  z-index: 1000;
+  overflow: auto;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.abandoner-body {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--abandoner-bg-color);
+  max-width: var(--abandoner-max-width);
+  min-width: var(--abandoner-min-width);
+  width: 100%;
+  max-height: var(--abandoner-max-height);
+  min-height: var(--abandoner-min-height);
+  height: 100%;
+  z-index: 1100;
+  display: block;
+}
+
+.abandoner-body > div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.abandoner-content {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+
+.abandoner-img-banner {
+  background-color: var(--abandoner-bg-icon-color);
+  height:10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.abandoner-img-banner img {
+  height: 70%;
+}
+
+.abandoner-text-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.abandoner-text-container h3 {
+  margin: 0.5rem;
+  font-family: var(--abandoner-heading-font);
+  font-size: var(--abandoner-heading-font-size);
+  font-weight: bold;
+  color: var(--abandoner-font-default-color);
+  box-sizing: border-box;
+  width: 80%;
+  text-align: center;
+}
+
+
+
+.abandoner-text-container h2 {
+  margin: 0.5rem;
+  font-family: var(--abandoner-default-font);
+  font-size: var(--abandoner-default-font-size);
+  font-weight: normal;
+  color: var(--abandoner-heading-font-color);
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.abandoner-span {
+  font-weight: bold;
+}
+
+.abandoner-button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: var(--abandoner-button-color);
+  color: var(--abandoner-button-font-color);
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid var(--abandoner-button-border-color);
+  border-radius: 10px;
+  font-size: var(--abandoner-button-font-size);
+  font-weight: 900;
+  font-family: var(--abandoner-close-button-font);
+  min-width: 137px;
+  transition: color 0.3s ease-in-out;
+}
+
+.abandoner-button:hover {
+  background-color: var(--abandoner-button-hover-color);
+}
+
+.abandoner-button:active {
+  background-color: var(--abandoner-button-clic-color);
+}
+
+.abandoner-exit-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0;
+  background-color: #071C2E;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--abandoner-button-close-font-size);
+  color: var(--abandoner-button-font-color);
+  font-weight: bold;
+  font-family: var(--abandoner-close-button-font);
+  transition: color 0.3s ease-in-out;
+}
+
+.abandoner-exit-btn:hover {
+  background-color: var(--abandoner-button-close-hover-color);
+  transform: scale(1.05);
+}
